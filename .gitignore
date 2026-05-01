@@ -1,0 +1,37 @@
+```
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.dist/
+*.bundle.js
+*.bundle.css
+assets/
+
+# Development
+.env
+.env.local
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Vite specific
+.vite/
+```
