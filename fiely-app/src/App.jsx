@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -8,20 +7,19 @@ function App() {
     phone: '',
     service: '',
     message: ''
-  })
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    alert('Dziękujemy za zgłoszenie! Skontaktujemy się wkrótce.')
-  }
+    e.preventDefault();
+    alert('Dziękujemy za zgłoszenie! Skontaktujemy się wkrótce.');
+  };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+    setFormData({...formData, [e.target.name]: e.target.value});
+  };
 
   return (
     <div className="app">
-      {/* Header */}
       <header className="header">
         <div className="container nav">
           <div className="logo">FIELY<span>.energy</span></div>
@@ -33,7 +31,6 @@ function App() {
         </div>
       </header>
 
-      {/* Hero */}
       <section className="hero">
         <div className="container hero-content">
           <h1>Energetyczna Przyszłość Twojego Domu</h1>
@@ -45,7 +42,6 @@ function App() {
         </div>
       </section>
 
-      {/* Features */}
       <section className="section features">
         <div className="container">
           <h2>Dlaczego FIELY?</h2>
@@ -74,7 +70,6 @@ function App() {
         </div>
       </section>
 
-      {/* Oferta */}
       <section id="oferta" className="section">
         <div className="container">
           <h2>Nasza Oferta</h2>
@@ -146,7 +141,6 @@ function App() {
         </div>
       </section>
 
-      {/* Proces */}
       <section id="proces" className="section features">
         <div className="container">
           <h2>Jak Pracujemy?</h2>
@@ -175,7 +169,6 @@ function App() {
         </div>
       </section>
 
-      {/* Kontakt */}
       <section id="kontakt" className="section">
         <div className="container">
           <h2>Skontaktuj Się</h2>
@@ -195,41 +188,14 @@ function App() {
               </div>
               <div>
                 <h3>⏰ Godziny Pracy</h3>
-                <p>Pn-Pt: 8:00 - 18:00<br/>Awaria: 24/7</p>
+                <p>Pn-Pt: 8:00 - 18:00<br />Awaria: 24/7</p>
               </div>
             </div>
-
             <form className="contact-form" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Imię i nazwisko"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Telefon"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                required
-              >
+              <input type="text" name="name" placeholder="Imię i nazwisko" value={formData.name} onChange={handleChange} required />
+              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+              <input type="tel" name="phone" placeholder="Telefon" value={formData.phone} onChange={handleChange} required />
+              <select name="service" value={formData.service} onChange={handleChange} required>
                 <option value="">Wybierz usługę</option>
                 <option value="pomiary">Pomiary i przeglądy</option>
                 <option value="modernizacja">Modernizacja instalacji</option>
@@ -237,23 +203,16 @@ function App() {
                 <option value="awaria">Diagnoza i awaria</option>
                 <option value="inne">Inne</option>
               </select>
-              <textarea
-                name="message"
-                placeholder="Wiadomość"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
+              <textarea name="message" placeholder="Wiadomość" rows="4" value={formData.message} onChange={handleChange}></textarea>
               <button type="submit" className="btn">Wyślij Zgłoszenie</button>
             </form>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 FIELY. Wszelkie prawa zastrzeżone.</p>
+          <p>© 2024 FIELY. Wszelkie prawa zastrzeżone.</p>
         </div>
       </footer>
     </div>
